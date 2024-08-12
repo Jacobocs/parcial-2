@@ -1,0 +1,51 @@
+#1 punto
+def main1(lst: tuple):
+    if len(lst) == len(set(lst)):
+        print("No hay elementos repetidos.")
+    else:
+        print("Hay elementos repetidos.")
+
+
+
+
+def tiene_dos_o_mas_vocales(cadena: str) -> bool:
+    vocales = 'aeiou'
+    contador = sum(1 for letra in cadena.lower() if letra in vocales)
+    return contador >= 2
+
+#2 puto
+def main2(lst: tuple):
+    encontrado = False
+    for cadena in lst:
+        if tiene_dos_o_mas_vocales(cadena):
+            print(cadena)
+            encontrado = True
+    if not encontrado:
+        print("No existe")
+
+#3 punto
+
+def main3(list1: tuple, list2: tuple):
+    resultado = tuple(item for item in list1 if item not in list2)
+    print(f"Elementos en list1 que no están en list2: {resultado}")
+
+
+#4 punto
+def main4(errores: tuple):
+    try:
+        promedio = sum(errores) / len(errores)
+        print(f"El promedio de errores es: {promedio}")
+    except ZeroDivisionError:
+        print("No se puede calcular el promedio de una lista vacía.")
+
+
+#5 punto
+def main5(lst: tuple):
+    lst_ordenada = sorted(lst)
+    n = len(lst_ordenada)
+    if n % 2 == 1:
+        mediana = lst_ordenada[n // 2]
+    else:
+        mediana = (lst_ordenada[n // 2 - 1] + lst_ordenada[n // 2]) / 2
+    print(f"La mediana es: {mediana}")
+
