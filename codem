@@ -36,7 +36,7 @@ def main4(errores: tuple):
         promedio = sum(errores) / len(errores)
         print(f"El promedio de errores es: {promedio}")
     except ZeroDivisionError:
-        print("No se puede calcular el promedio de una lista vacía.")
+        print("No se puede calcular de una lista vacía.")
 
 
 #5 punto
